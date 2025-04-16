@@ -3,81 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alken</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: black;
-            font-family: Arial, sans-serif;
-        }
-        
-        .card {
-            background-color:black;
-            border-radius: 10px;
-            border: 4px solid white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 80%;
-            height: 80%;
-            max-width: 500px;
-            max-height: 900px;
-            text-align: center;
-        }
-        
-        .card-title {
-            color: whitesmoke;
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-        
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        
-        .clickable-image {
-            width: 120px;
-            height: 120px;
-            margin: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        .clickable-image:hover {
-            transform: scale(1.1);
-        }
-        
-        @media (max-width: 600px) {
-            .card {
-                width: 90%;
-                padding: 20px;
-            }
-            
-            .clickable-image {
-                width: 80px;
-                height: 80px;
-            }
-        }
-    </style>
+    <title>Artadhiya</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="card">
-        <h1 class="card-title">Hi Arthadiyans!</h1>
-        
-        <div class="image-container">
+    <!-- Upper Section with Logo -->
+    <div class="upper-section">
+        <div class="artadhiya-logo">
+            <img src="name.png" alt="Artadhiya Logo" class="logo-image">
             
-            <img src="https://placehold.co/400" alt="Image 1" class="clickable-image" onclick="alert('You clicked image 1!')">
-            <img src="https://placehold.co/400" alt="Image 2" class="clickable-image" onclick="alert('You clicked image 2!')">
-            <img src="https://placehold.co/400" alt="Image 3" class="clickable-image" onclick="alert('You clicked image 3!')">
+        </div>
+        <button class="about-btn">about us</button>
+    </div>
+    
+    <!-- Hero Section with Choir Image -->
+    <div class="hero-section">
+        <img src="heroimage.png" alt="Artadhiya Choir" class="hero-image">
+    </div>
+    
+    <!-- Navigation Bookmarks -->
+    <div class="nav-container">
+        <div class="wave-bg">
+            <div class="wave-shape"></div>
+            <div class="navigation">
+                <div class="nav-option active" data-tab="ost">
+                    <span>🎵 our ost</span>
+                </div>
+                <div class="nav-option" data-tab="recap">
+                    <span>🎬 recap</span>
+                </div>
+                <div class="nav-option" data-tab="letter">
+                    <span>💌 letter</span>
+                </div>
+            </div>
         </div>
     </div>
+    
+    <!-- Content Section -->
+    <div class="content-section">
+        <!-- OST Content -->
+        <div class="tab-content active" id="ost-content">
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <div class="arrow left">&#10094;</div>
+                    <div class="slides-wrapper">
+                        <div class="slide"><img src="https://placehold.co/400" alt="Slide 1"></div>
+                        <div class="slide active"><img src="https://placehold.co/500" alt="Slide 2"></div>
+                        <div class="slide"><img src="https://placehold.co/400" alt="Slide 3"></div>
+                        
+                    </div>
+                    <div class="arrow right">&#10095;</div>
+                </div>
+            </div>
+            
+            <div class="content-info">
+                <div class="info-header">
+                    <img src="logo.png" alt="Artadhiya Icon" class="info-logo">
+                    <h2 class="content-title">What is Artadhiya?</h2>
+                </div>
+                <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget blandit erat. Quisque lacinia, lacus nec elementum egestas, tellus dolor ultrices nisi, vel fringilla velit elit in elit. Nullam tempor lacus at arcu iaculis, ac placerat ligula porta. Sed sagittis eget quam id finibus. Morbi eget nisi in nunc blandit consequat.</p>
+            </div>
+            
+            <div class="footer">
+                <a href="#contact">Contact Us</a> | 
+                <a href="#instagram">Instagram</a> | 
+                <a href="#email">Email</a>
+            </div>
+        </div>
+        
+        <!-- Recap Content -->
+        <div class="tab-content" id="recap-content">
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <div class="arrow left">&#10094;</div>
+                    <div class="slides-wrapper">
+                        <div class="slide"><img src="https://placehold.co/500" alt="Slide 1"></div>
+                        <div class="slide active"><img src="https://placehold.co/500" alt="Slide 2"></div>
+                        <div class="slide"><img src="https://placehold.co/500" alt="Slide 3"></div>
+                        <div class="slide"><img src="https://placehold.co/400" alt="Slide 4"></div>
+                        <div class="slide"><img src="https://placehold.co/400" alt="Slide 5"></div>
+                    </div>
+                    <div class="arrow right">&#10095;</div>
+                </div>
+            </div>
+            
+            <div class="content-info">
+                <div class="info-header">
+                    <img src="logo.png" alt="Artadhiya Icon" class="info-logo">
+                    <h2 class="content-title">Recap</h2>
+                </div>
+                <p class="content-text">View our recent performances and events. We captured all the magical moments just for you.</p>
+            </div>
+            
+            <div class="footer">
+                <a href="#contact">Contact Us</a> | 
+                <a href="#instagram">Instagram</a> | 
+                <a href="#email">Email</a>
+            </div>
+        </div>
+        
+        <!-- Letter Content -->
+        <div class="tab-content" id="letter-content">
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <div class="arrow left">&#10094;</div>
+                    <div class="slides-wrapper">
+                        <div class="slide"><img src="https://placehold.co/600" alt="Slide 1"></div>
+                        <div class="slide active"><img src="https://placehold.co/600" alt="Slide 2"></div>
+                        <div class="slide"><img src="https://placehold.co/600" alt="Slide 3"></div>
+                        <div class="slide"><img src="https://placehold.co/400" alt="Slide 4"></div>
+                        <div class="slide"><img src="https://placehold.co/400" alt="Slide 5"></div>
+                    </div>
+                    <div class="arrow right">&#10095;</div>
+                </div>
+            </div>
+            
+            <div class="content-info">
+                <div class="info-header">
+                    <img src="logo.png" alt="Artadhiya Icon" class="info-logo">
+                    <h2 class="content-title">Letter</h2>
+                </div>
+                <p class="content-text">Messages from our director and members. Read our thoughts and inspirations.</p>
+            </div>
+            
+            <div class="footer">
+                <a href="#contact">Contact Us</a> | 
+                <a href="#instagram">Instagram</a> | 
+                <a href="#email">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
